@@ -28,57 +28,58 @@ namespace Dhgms.JobHelper.OrleansGrainInterfaces
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.0.0")]
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
-    public class Grain1Factory
+    public class JobGrainFactory<TJobResult>
+    
     {
         
 
-                        public static Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain GetGrain(long primaryKey)
+                        public static IJobGrain<TJobResult> GetGrain(long primaryKey)
                         {
-                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain), -280256842, primaryKey));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(IJobGrain<TJobResult>), -679519484, primaryKey));
                         }
 
-                        public static Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain GetGrain(long primaryKey, string grainClassNamePrefix)
+                        public static IJobGrain<TJobResult> GetGrain(long primaryKey, string grainClassNamePrefix)
                         {
-                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain), -280256842, primaryKey, grainClassNamePrefix));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(IJobGrain<TJobResult>), -679519484, primaryKey, grainClassNamePrefix));
                         }
 
-                        public static Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain GetGrain(System.Guid primaryKey)
+                        public static IJobGrain<TJobResult> GetGrain(System.Guid primaryKey)
                         {
-                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain), -280256842, primaryKey));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(IJobGrain<TJobResult>), -679519484, primaryKey));
                         }
 
-                        public static Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain GetGrain(System.Guid primaryKey, string grainClassNamePrefix)
+                        public static IJobGrain<TJobResult> GetGrain(System.Guid primaryKey, string grainClassNamePrefix)
                         {
-                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain), -280256842, primaryKey, grainClassNamePrefix));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(IJobGrain<TJobResult>), -679519484, primaryKey, grainClassNamePrefix));
                         }
 
-            public static Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain Cast(global::Orleans.Runtime.IAddressable grainRef)
+            public static IJobGrain<TJobResult> Cast(global::Orleans.Runtime.IAddressable grainRef)
             {
                 
-                return Grain1Reference.Cast(grainRef);
+                return JobGrainReference<TJobResult>.Cast(grainRef);
             }
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.0.0")]
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
         [System.SerializableAttribute()]
-        [global::Orleans.CodeGeneration.GrainReferenceAttribute("Dhgms.JobHelper.OrleansGrainInterfaces.Dhgms.JobHelper.OrleansGrainInterfaces.IGr" +
-            "ain1")]
-        internal class Grain1Reference : global::Orleans.Runtime.GrainReference, global::Orleans.Runtime.IAddressable, Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain
+        [global::Orleans.CodeGeneration.GrainReferenceAttribute("Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain<TJobResult>")]
+        internal class JobGrainReference<TJobResult> : global::Orleans.Runtime.GrainReference, global::Orleans.Runtime.IAddressable, Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain<TJobResult>
+        
         {
             
 
-            public static Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain Cast(global::Orleans.Runtime.IAddressable grainRef)
+            public static IJobGrain<TJobResult> Cast(global::Orleans.Runtime.IAddressable grainRef)
             {
                 
-                return (Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain) global::Orleans.Runtime.GrainReference.CastInternal(typeof(Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain), (global::Orleans.Runtime.GrainReference gr) => { return new Grain1Reference(gr);}, grainRef, -280256842);
+                return (IJobGrain<TJobResult>) global::Orleans.Runtime.GrainReference.CastInternal(typeof(IJobGrain<TJobResult>), (global::Orleans.Runtime.GrainReference gr) => { return new JobGrainReference<TJobResult>(gr);}, grainRef, -679519484);
             }
             
-            protected internal Grain1Reference(global::Orleans.Runtime.GrainReference reference) : 
+            protected internal JobGrainReference(global::Orleans.Runtime.GrainReference reference) : 
                     base(reference)
             {
             }
             
-            protected internal Grain1Reference(SerializationInfo info, StreamingContext context) : 
+            protected internal JobGrainReference(SerializationInfo info, StreamingContext context) : 
                     base(info, context)
             {
             }
@@ -87,7 +88,7 @@ namespace Dhgms.JobHelper.OrleansGrainInterfaces
             {
                 get
                 {
-                    return -280256842;
+                    return -679519484;
                 }
             }
             
@@ -95,55 +96,61 @@ namespace Dhgms.JobHelper.OrleansGrainInterfaces
             {
                 get
                 {
-                    return "Dhgms.JobHelper.OrleansGrainInterfaces.Dhgms.JobHelper.OrleansGrainInterfaces.IGr" +
-                        "ain1";
+                    return "Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain<TJobResult>";
                 }
             }
             
             [global::Orleans.CodeGeneration.CopierMethodAttribute()]
             public static object _Copier(object original)
             {
-                Grain1Reference input = ((Grain1Reference)(original));
-                return ((Grain1Reference)(global::Orleans.Runtime.GrainReference.CopyGrainReference(input)));
+                JobGrainReference<TJobResult> input = ((JobGrainReference<TJobResult>)(original));
+                return ((JobGrainReference<TJobResult>)(global::Orleans.Runtime.GrainReference.CopyGrainReference(input)));
             }
             
             [global::Orleans.CodeGeneration.SerializerMethodAttribute()]
             public static void _Serializer(object original, global::Orleans.Serialization.BinaryTokenStreamWriter stream, System.Type expected)
             {
-                Grain1Reference input = ((Grain1Reference)(original));
+                JobGrainReference<TJobResult> input = ((JobGrainReference<TJobResult>)(original));
                 global::Orleans.Runtime.GrainReference.SerializeGrainReference(input, stream, expected);
             }
             
             [global::Orleans.CodeGeneration.DeserializerMethodAttribute()]
             public static object _Deserializer(System.Type expected, global::Orleans.Serialization.BinaryTokenStreamReader stream)
             {
-                return Grain1Reference.Cast(((global::Orleans.Runtime.GrainReference)(global::Orleans.Runtime.GrainReference.DeserializeGrainReference(expected, stream))));
+                return JobGrainReference<TJobResult>.Cast(((global::Orleans.Runtime.GrainReference)(global::Orleans.Runtime.GrainReference.DeserializeGrainReference(expected, stream))));
             }
             
             public override bool IsCompatible(int interfaceId)
             {
-                return (interfaceId == this.InterfaceId);
+                return ((interfaceId == this.InterfaceId) 
+                            || (interfaceId == 1900190341));
             }
             
             protected override string GetMethodName(int interfaceId, int methodId)
             {
-                return Grain1MethodInvoker.GetMethodName(interfaceId, methodId);
+                return JobGrainMethodInvoker<TJobResult>.GetMethodName(interfaceId, methodId);
+            }
+            
+            System.Threading.Tasks.Task<TJobResult> Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain<TJobResult>.Execute()
+            {
+
+                return base.InvokeMethodAsync<TJobResult>(-1673325079, new object[] {} );
             }
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.0.0")]
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
-    [global::Orleans.CodeGeneration.MethodInvokerAttribute("Dhgms.JobHelper.OrleansGrainInterfaces.Dhgms.JobHelper.OrleansGrainInterfaces.IGr" +
-        "ain1", -280256842)]
-    internal class Grain1MethodInvoker : global::Orleans.CodeGeneration.IGrainMethodInvoker
+    [global::Orleans.CodeGeneration.MethodInvokerAttribute("Dhgms.JobHelper.OrleansGrainInterfaces.IJobGrain<TJobResult>", -679519484)]
+    internal class JobGrainMethodInvoker<TJobResult> : global::Orleans.CodeGeneration.IGrainMethodInvoker
+    
     {
         
         int global::Orleans.CodeGeneration.IGrainMethodInvoker.InterfaceId
         {
             get
             {
-                return -280256842;
+                return -679519484;
             }
         }
         
@@ -154,9 +161,11 @@ namespace Dhgms.JobHelper.OrleansGrainInterfaces
             {                    if (grain == null) throw new System.ArgumentNullException("grain");
                 switch (interfaceId)
                 {
-                    case -280256842:  // IGrain1
+                    case -679519484:  // IJobGrain`1
                         switch (methodId)
                         {
+                            case -1673325079: 
+                                return ((IJobGrain<TJobResult>)grain).Execute().ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)t.Result; });
                             default: 
                             throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
                         }
@@ -178,10 +187,12 @@ namespace Dhgms.JobHelper.OrleansGrainInterfaces
             switch (interfaceId)
             {
                 
-                case -280256842:  // IGrain1
+                case -679519484:  // IJobGrain`1
                     switch (methodId)
                     {
-                        
+                        case -1673325079:
+                            return "Execute";
+                    
                         default: 
                             throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
                     }

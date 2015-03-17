@@ -24,8 +24,6 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 using System;
 using System.Net;
 
-using Orleans.Runtime.Host;
-
 namespace Dhgms.JobHelper.Mock.SiloHost
 {
     internal class OrleansHostWrapper : IDisposable
@@ -36,7 +34,7 @@ namespace Dhgms.JobHelper.Mock.SiloHost
             set { siloHost.Debug = value; }
         }
 
-        private SiloHost siloHost;
+        private Orleans.Runtime.Host.SiloHost siloHost;
 
         public OrleansHostWrapper(string[] args)
         {
@@ -165,7 +163,7 @@ namespace Dhgms.JobHelper.Mock.SiloHost
                 }
             }
 
-            siloHost = new SiloHost(siloName);
+            siloHost = new Orleans.Runtime.Host.SiloHost(siloName);
             siloHost.ConfigFileName = configFileName;
             if (deploymentId != null)
                 siloHost.DeploymentId = deploymentId;

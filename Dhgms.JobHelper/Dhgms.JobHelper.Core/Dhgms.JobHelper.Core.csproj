@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationInstanceMutexLock.cs" />
+    <Compile Include="Exceptions\NoEmailRecipientsException.cs" />
+    <Compile Include="Helpers\EmailHelper.cs" />
     <Compile Include="IApplicationConfiguration.cs" />
     <Compile Include="IConfigurationLoader.cs" />
     <Compile Include="IJob.cs" />
@@ -52,6 +54,8 @@
     <Compile Include="IJobResult.cs" />
     <Compile Include="IServiceLocator.cs" />
     <Compile Include="JobHandler.cs" />
+    <Compile Include="JobNotificationListeners\EmailJobNotificationListener.cs" />
+    <Compile Include="JobNotificationListeners\EventLogJobNotificationListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
