@@ -20,6 +20,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.OrleansGrai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.OrleansGrains", "Dhgms.JobHelper.OrleansGrains\Dhgms.JobHelper.OrleansGrains.csproj", "{1A8B94A6-0DDE-4427-9607-59C49C4B153C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.Mock.QuartzNet", "Dhgms.JobHelper.Mock.QuartzNet\Dhgms.JobHelper.Mock.QuartzNet.csproj", "{9C221F35-0C84-46C6-BED7-1B62CBFE1844}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.Mock.HangFire", "Dhgms.JobHelper.Mock.HangFire\Dhgms.JobHelper.Mock.HangFire.csproj", "{13BF38D7-F560-494A-BD74-DDA547120E10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.Mock.Standalone", "Dhgms.JobHelper.Mock.Standalone\Dhgms.JobHelper.Mock.Standalone.csproj", "{98014854-DE74-4073-ABD1-BC8D4FF4DD67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{14C11533-B479-4F8F-AC41-F57B3D8A35EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mocks", "Mocks", "{BD96F256-EA1F-482D-8402-FCF65330079C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,8 +56,27 @@ Global
 		{1A8B94A6-0DDE-4427-9607-59C49C4B153C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A8B94A6-0DDE-4427-9607-59C49C4B153C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A8B94A6-0DDE-4427-9607-59C49C4B153C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C221F35-0C84-46C6-BED7-1B62CBFE1844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C221F35-0C84-46C6-BED7-1B62CBFE1844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C221F35-0C84-46C6-BED7-1B62CBFE1844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C221F35-0C84-46C6-BED7-1B62CBFE1844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13BF38D7-F560-494A-BD74-DDA547120E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13BF38D7-F560-494A-BD74-DDA547120E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13BF38D7-F560-494A-BD74-DDA547120E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13BF38D7-F560-494A-BD74-DDA547120E10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98014854-DE74-4073-ABD1-BC8D4FF4DD67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98014854-DE74-4073-ABD1-BC8D4FF4DD67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98014854-DE74-4073-ABD1-BC8D4FF4DD67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98014854-DE74-4073-ABD1-BC8D4FF4DD67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{18980D17-EE94-428A-BA5D-98364EE12493} = {14C11533-B479-4F8F-AC41-F57B3D8A35EB}
+		{0C31A744-519F-45EB-AAEC-3333377B80F9} = {BD96F256-EA1F-482D-8402-FCF65330079C}
+		{9C221F35-0C84-46C6-BED7-1B62CBFE1844} = {BD96F256-EA1F-482D-8402-FCF65330079C}
+		{13BF38D7-F560-494A-BD74-DDA547120E10} = {BD96F256-EA1F-482D-8402-FCF65330079C}
+		{98014854-DE74-4073-ABD1-BC8D4FF4DD67} = {BD96F256-EA1F-482D-8402-FCF65330079C}
 	EndGlobalSection
 EndGlobal
