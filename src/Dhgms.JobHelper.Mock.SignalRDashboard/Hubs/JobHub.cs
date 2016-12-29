@@ -6,6 +6,7 @@ using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 using System.Threading.Tasks;
 using Dhgms.JobHelper.Mock.SignalRDashboard.Repositories;
+using Dhgms.JobHelper.Mock.SignalRDashboard.Responses;
 using EnsureThat;
 using JetBrains.Annotations;
 
@@ -14,18 +15,18 @@ namespace Dhgms.JobHelper.Mock.SignalRDashboard.Hubs
     [HubName("JobStateHub")]
     public class JobHub : Hub
     {
-        private readonly IJobRepository _jobRepository;
+        private readonly IJobStateTicker _jobStateTicker;
 
-        public JobHub([NotNull]IJobRepository jobRepository)
+        public JobHub([NotNull]IJobStateTicker jobStateTicker)
         {
-            EnsureArg.IsNotNull(jobRepository, nameof(jobRepository));
+            EnsureArg.IsNotNull(jobStateTicker, nameof(jobStateTicker));
 
-            this._jobRepository = jobRepository;
+            this._jobStateTicker = jobStateTicker;
         }
 
-        public async Task<IEnumerable<Models.JobModel>> ListJobs()
+        public async Task<IEnumerable<JobStateResponse>> ListJobs()
         {
-            return await this._jobRepository.ListJobs<Models.JobModel>(null);
+            return await this._jobStateTicker.ListJobs();
         }
     }
 }

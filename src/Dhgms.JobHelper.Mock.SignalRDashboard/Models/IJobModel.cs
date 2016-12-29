@@ -10,6 +10,6 @@ namespace Dhgms.JobHelper.Mock.SignalRDashboard.Models
     {
         string Name { get; set; }
 
-        TJobState JobState { get; set; }
+        TJobState ExecutionState { get; set; }
     }
 }

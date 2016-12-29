@@ -1,4 +1,7 @@
-﻿namespace Dhgms.JobHelper.Mock.SignalRDashboard
+﻿using Dhgms.JobHelper.Mock.SignalRDashboard.Responses;
+using EnsureThat;
+
+namespace Dhgms.JobHelper.Mock.SignalRDashboard
 {
     using System;
     using System.Collections.Generic;
@@ -16,25 +19,29 @@
     {
         private readonly IHubConnectionContext<IJobHubClient> _clients;
         private readonly IJobRepository _backingJobRepository;
-        private readonly Expression<Func<JobModel, string>> _jobSelectorExpression;
 
         private JobStateTicker(IHubConnectionContext<IJobHubClient> clients, IJobRepository backingJobRepository)
         {
+            EnsureArg.IsNotNull(clients, nameof(clients));
+            EnsureArg.IsNotNull(backingJobRepository, nameof(backingJobRepository));
+
             this._clients = clients;
             this._backingJobRepository = backingJobRepository;
-
-            // TODO: expand this into proper model
-            this._jobSelectorExpression = model => model.Name;
         }
 
-        public async Task<IEnumerable<string>> ListJobs()
+        public async Task<IEnumerable<JobStateResponse>> ListJobs()
         {
-            return await this._backingJobRepository.ListJobs(this._jobSelectorExpression);
+            return await this._backingJobRepository.ListJobs(GetJobStateResponseSelector());
         }
 
-        private void BroadCastJobState(JobModel jobModel)
+        private void BroadcastJobState(JobModel jobModel)
         {
             this._clients.All.OnJobUpdated(jobModel);
+        }
+
+        private static Expression<Func<JobModel, JobStateResponse>> GetJobStateResponseSelector()
+        {
+            return model => new JobStateResponse { Id = model.Id, Name = model.Name };
         }
     }
 }

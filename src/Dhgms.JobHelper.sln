@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.Core", "Dhgms.JobHelper.Core\Dhgms.JobHelper.Core.csproj", "{3E42CFCA-10B0-4429-82B3-732926C22113}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.Tests", "Dhgms.JobHelper.Tests\Dhgms.JobHelper.Tests.csproj", "{18980D17-EE94-428A-BA5D-98364EE12493}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.UnitTests", "Dhgms.JobHelper.Tests\Dhgms.JobHelper.UnitTests.csproj", "{18980D17-EE94-428A-BA5D-98364EE12493}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3C43FCBE-9D91-4963-964E-062464E21160}"
 EndProject
@@ -26,6 +26,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.Mock.OrleansHost", "Dhgms.JobHelper.Mock.OrleansHost\Dhgms.JobHelper.Mock.OrleansHost.csproj", "{A5CAAC37-2C47-4825-844F-5F3838D48F73}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.Mock.SignalRDashboard", "Dhgms.JobHelper.Mock.SignalRDashboard\Dhgms.JobHelper.Mock.SignalRDashboard.csproj", "{678E1C91-7953-494D-A89F-274C535C3995}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.EntityFramework", "Dhgms.JobHelper.EntityFramework\Dhgms.JobHelper.EntityFramework.csproj", "{AF582601-B805-437F-960E-54666EBE0D4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobHelper.ApiWebSite", "Dhgms.JobHelper.ApiWebSite\Dhgms.JobHelper.ApiWebSite.csproj", "{9EF56E45-17CA-43BF-A846-991F2A96E8CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{981FB8A7-273B-49F2-9950-7C57D11F5913}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{6C3A5728-BEEE-4B85-966D-4B92A98E53F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dhgms.JobTracking.Client", "Dhgms.JobTracking.Client\Dhgms.JobTracking.Client.csproj", "{2A2D6013-39A4-47E8-80E6-DC8A8B51349B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +79,18 @@ Global
 		{678E1C91-7953-494D-A89F-274C535C3995}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{678E1C91-7953-494D-A89F-274C535C3995}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{678E1C91-7953-494D-A89F-274C535C3995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF582601-B805-437F-960E-54666EBE0D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF582601-B805-437F-960E-54666EBE0D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF582601-B805-437F-960E-54666EBE0D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF582601-B805-437F-960E-54666EBE0D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF56E45-17CA-43BF-A846-991F2A96E8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF56E45-17CA-43BF-A846-991F2A96E8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF56E45-17CA-43BF-A846-991F2A96E8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF56E45-17CA-43BF-A846-991F2A96E8CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A2D6013-39A4-47E8-80E6-DC8A8B51349B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A2D6013-39A4-47E8-80E6-DC8A8B51349B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A2D6013-39A4-47E8-80E6-DC8A8B51349B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A2D6013-39A4-47E8-80E6-DC8A8B51349B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,5 +102,7 @@ Global
 		{98014854-DE74-4073-ABD1-BC8D4FF4DD67} = {BD96F256-EA1F-482D-8402-FCF65330079C}
 		{A5CAAC37-2C47-4825-844F-5F3838D48F73} = {BD96F256-EA1F-482D-8402-FCF65330079C}
 		{678E1C91-7953-494D-A89F-274C535C3995} = {BD96F256-EA1F-482D-8402-FCF65330079C}
+		{9EF56E45-17CA-43BF-A846-991F2A96E8CC} = {981FB8A7-273B-49F2-9950-7C57D11F5913}
+		{2A2D6013-39A4-47E8-80E6-DC8A8B51349B} = {6C3A5728-BEEE-4B85-966D-4B92A98E53F5}
 	EndGlobalSection
 EndGlobal

@@ -16,8 +16,8 @@
 
         private static void RegisterJobHub(IDependencyResolver dependencyResolver, IMutableDependencyResolver mutatableDependencyResolver)
         {
-            var jobRepository = dependencyResolver.GetService<IJobRepository>();
-            var jobHub = new JobHub(jobRepository);
+            var jobStateTicker = dependencyResolver.GetService<IJobStateTicker>();
+            var jobHub = new JobHub(jobStateTicker);
             mutatableDependencyResolver.RegisterConstant(jobHub);
         }
     }
