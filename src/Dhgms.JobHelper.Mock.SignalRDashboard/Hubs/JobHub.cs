@@ -9,11 +9,12 @@ using Dhgms.JobHelper.Mock.SignalRDashboard.Repositories;
 using Dhgms.JobHelper.Mock.SignalRDashboard.Responses;
 using EnsureThat;
 using JetBrains.Annotations;
+using Splat;
 
 namespace Dhgms.JobHelper.Mock.SignalRDashboard.Hubs
 {
-    [HubName("JobStateHub")]
-    public class JobHub : Hub
+    [HubName("jobStateHub")]
+    public class JobHub : Hub<IJobHubClient>, IEnableLogger
     {
         private readonly IJobStateTicker _jobStateTicker;
 

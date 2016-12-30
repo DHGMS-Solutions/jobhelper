@@ -117,6 +117,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Index-JQuery.html" />
     <Content Include="Index-KnockOutJS.html" />
+    <Content Include="Index.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -149,12 +150,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\Configuration.cs" />
+    <Compile Include="Configuration\OwinConfiguration.cs" />
     <Compile Include="Configuration\ServiceLocatorConfiguration.cs" />
     <Compile Include="Helpers\RepositoryHelpers.cs" />
     <Compile Include="Hubs\JobHub.cs" />
     <Compile Include="IJobHubClient.cs" />
     <Compile Include="IJobStateTicker.cs" />
+    <Compile Include="InMemoryJobStateRepository.cs" />
     <Compile Include="JobStateTicker.cs" />
     <Compile Include="Models\IJobModel.cs" />
     <Compile Include="Models\JobModel.cs" />

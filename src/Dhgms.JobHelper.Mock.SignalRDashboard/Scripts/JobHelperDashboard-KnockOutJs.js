@@ -10,7 +10,7 @@
 
     function init() {
         // set up the signalr initial data burst
-        ticker.server.ListJobs().done(function (jobStateModels) {
+        ticker.server.listJobs().done(function (jobStateModels) {
             $.each(jobStateModels, function () {
                 this.allItems.push(this);
             });

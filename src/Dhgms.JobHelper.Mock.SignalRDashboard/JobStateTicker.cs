@@ -20,7 +20,7 @@ namespace Dhgms.JobHelper.Mock.SignalRDashboard
         private readonly IHubConnectionContext<IJobHubClient> _clients;
         private readonly IJobRepository _backingJobRepository;
 
-        private JobStateTicker(IHubConnectionContext<IJobHubClient> clients, IJobRepository backingJobRepository)
+        public JobStateTicker(IHubConnectionContext<IJobHubClient> clients, IJobRepository backingJobRepository)
         {
             EnsureArg.IsNotNull(clients, nameof(clients));
             EnsureArg.IsNotNull(backingJobRepository, nameof(backingJobRepository));

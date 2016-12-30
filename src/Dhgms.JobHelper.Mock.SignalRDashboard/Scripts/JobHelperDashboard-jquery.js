@@ -13,11 +13,9 @@ if (!String.prototype.supplant) {
 $(function () {
 
     var ticker = $.connection.jobStateHub, // the generated client-side hub proxy
-        //up = '▲',
-        //down = '▼',
         $stockTable = $('#jobTable'),
         $stockTableBody = $stockTable.find('tbody'),
-        rowTemplate = '<tr data-symbol="{JobGuid}"><td>{Name}</td></tr>';
+        rowTemplate = '<tr data-symbol="{JobGuid}"><td><a href="#">{Name}</a></td></tr>';
 
     function formatJobState(jobState) {
         return $.extend(jobState, {
@@ -28,7 +26,7 @@ $(function () {
     }
 
     function init() {
-        ticker.server.ListJobs().done(function (jobStateModels) {
+        ticker.server.listJobs().done(function (jobStateModels) {
             $stockTableBody.empty();
             $.each(jobStateModels, function () {
                 var jobStateModel = formatJobState(this);

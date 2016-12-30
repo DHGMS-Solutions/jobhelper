@@ -5,11 +5,6 @@
     <title>JobHelper SignalR Dashboard KnockoutJS Sample</title>
 
     <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
-
-    <script src="~/Scripts/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="~/Scripts/jquery.signalR-2.1.2.js" type="text/javascript"></script>
-    <script src="~/Scripts/knockout-3.4.0.debug.js" type="text/javascript"></script>
-    <script src="/signalr/hubs" type="text/javascript"></script>
 <body>
 <div class="table table-bordered">
     <table>
@@ -21,29 +16,10 @@
         </tbody>
     </table>
 </div>
-<script language="javascript">
-    $(function() {
-        var BetterListModel = function() {
-            this.itemToAdd = ko.observable("");
-            this.allItems = ko.observableArray(); // Initial items
-
-            this.addItem = function() {
-                if ((this.itemToAdd() != "") && (this.allItems.indexOf(this.itemToAdd()) < 0)) // Prevent blanks and duplicates
-                    this.allItems.push(this.itemToAdd());
-            };
-
-            this.removeSelected = function() {
-                this.allItems.removeAll(this.selectedItems());
-                this.selectedItems([]); // Clear selection
-            };
-
-            this.sortItems = function() {
-                this.allItems.sort();
-            };
-        };
-
-        ko.applyBindings(new BetterListModel());
-    }
-</script>
+    <script src="/Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.signalR-2.1.2.js" type="text/javascript"></script>
+    <script src="/signalr/hubs" type="text/javascript"></script>
+    <script src="/Scripts/knockout-3.4.0.debug.js" type="text/javascript"></script>
+    <script src="/Scripts/JobHelperDashboard-KnockOutJs.js"></script>
 </body>
 </html>
