@@ -1,4 +1,4 @@
-﻿using Dhgms.JobHelper.Mock.SignalRDashboard.Responses;
+﻿using Dhgms.JobHelper.Common.Responses;
 using EnsureThat;
 
 namespace Dhgms.JobHelper.Mock.SignalRDashboard

@@ -5,8 +5,9 @@ using System.Web;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 using System.Threading.Tasks;
+using Dhgms.JobHelper.Common;
+using Dhgms.JobHelper.Common.Responses;
 using Dhgms.JobHelper.Mock.SignalRDashboard.Repositories;
-using Dhgms.JobHelper.Mock.SignalRDashboard.Responses;
 using EnsureThat;
 using JetBrains.Annotations;
 using Splat;
@@ -14,7 +15,7 @@ using Splat;
 namespace Dhgms.JobHelper.Mock.SignalRDashboard.Hubs
 {
     [HubName("jobStateHub")]
-    public class JobHub : Hub<IJobHubClient>, IEnableLogger
+    public class JobHub : Hub<IJobHubClient>, IJobStateHub, IEnableLogger
     {
         private readonly IJobStateTicker _jobStateTicker;
 

@@ -1,4 +1,4 @@
-﻿namespace Dhgms.JobHelper.Mock.SignalRDashboard.Responses
+﻿namespace Dhgms.JobHelper.Common.Responses
 {
     public class JobStateResponse
     {
