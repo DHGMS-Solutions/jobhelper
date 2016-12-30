@@ -1,10 +1,10 @@
 ﻿$(function () {
 
-    var JobStateListViewModel = function () {
-        this.allItems = ko.observableArray();
+    var jobStateListViewModel = {
+        jobs : ko.observableArray()
     };
 
-    ko.applyBindings(new JobStateListViewModel());
+    ko.applyBindings(jobStateListViewModel);
 
     var ticker = $.connection.jobStateHub;
 
@@ -12,7 +12,7 @@
         // set up the signalr initial data burst
         ticker.server.listJobs().done(function (jobStateModels) {
             $.each(jobStateModels, function () {
-                this.allItems.push(this);
+                jobStateListViewModel.jobs.push(this);
             });
         });
     }
